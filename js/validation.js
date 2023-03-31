@@ -108,3 +108,12 @@ function validatenumber(){
         return false;
        }
 }
+
+$(window).scroll(function() {
+    if($(this).scrollTop() > 1)  /*height in pixels when the navbar becomes non opaque*/ 
+    {
+        $('#navimage').width(155);
+    } else {
+        $('#navimage').width(286);
+    }
+});
