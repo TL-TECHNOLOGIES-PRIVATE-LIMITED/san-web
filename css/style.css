@@ -3251,6 +3251,11 @@ select.input-border {
 	padding: 20px 3px 5px 3px;
 color: black;
 }
+.affix.header-1 #main-menu .navbar .nav > li > a:hover {
+	margin-bottom: 13px;
+	padding: 20px 3px 5px 3px;
+color: rgb(154, 154, 154);
+}
 .header-1 #main-menu .navbar .nav > li.current > a {
 	padding:38px 3px 5px 3px;
 	margin: 0 12px 17px 12px;
@@ -11391,7 +11396,19 @@ form span{
   @media only screen and (min-width:992px){
 
     #buttonshowhide .hideAndShow{
-      display: none;
+      display: none !important;
+    }
+    #showandhidenlayer{
+      display: none !important;
+    }
+
+  }
+  @media only screen and (max-width:992px){
+
+    #showandhidenlayer{
+      display: flex;
+       align-items: center;
+        justify-content: center;
     }
 
   }
