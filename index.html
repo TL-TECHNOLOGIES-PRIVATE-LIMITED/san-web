@@ -282,9 +282,55 @@
 	
 			}
 		}
-
-
 	</style>
+	<style>
+		/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+#dropdown.active + .dropdown-content {
+  display: block;
+}
+	</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var dropdown = document.getElementById('dropdown');
+      var dropdownContent = dropdown.nextElementSibling;
+
+      dropdown.addEventListener('click', function() {
+        dropdown.classList.toggle('active');
+      });
+
+      document.addEventListener('click', function(event) {
+        if (!dropdown.contains(event.target)) {
+          dropdown.classList.remove('active');
+        }
+      });
+    });
+  </script>
 
 
 </head>
@@ -374,11 +420,6 @@
 													<div class="main-menu-title">HOME</div>
 												</a>
 											</li>
-
-											<!-- MENU ITEM -->
-
-
-											<!-- MENU ITEM -->
 											<li>
 												<a href="#aboutus">
 													<div class="main-menu-title">ABOUT US</div>
@@ -406,7 +447,16 @@
 											</li>
 
 											<!-- MENU ITEM -->
-
+											<li>
+												<a href="#" id="dropdown">	
+												<div class="main-menu-title">BROCHURES <i class="fa fa-caret-down"></i></div></a>
+													<div class="dropdown-content">
+														<a href="/brochureUK.html" >UK to India</a>
+														<a href="/brochureUSA.html" >USA to India</a>
+														<a href="#">India to World</a>
+													</div>
+												
+											</li>
 
 											<!-- MENU ITEM -->
 											<li>
