@@ -37,6 +37,10 @@
       sizes="114x114"
       href="nikhil/Logo-for-web.png"
     />
+    <!--  BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--  CSS THEME -->
+    <link rel="stylesheet" href="css/style.css" />
 
     <style>
       * {
@@ -50,7 +54,7 @@
         font-size: 12px;
         color: #333;
         font-family: "Oswald", sans-serif;
-        zoom: 125%;
+        /* zoom: 125%; */
       }
 
       .bookHeader {
@@ -58,9 +62,6 @@
         align-items: center;
         justify-content: space-evenly;
         font-size: 20px;
-      }
-
-      @media screen and (max-width: 1115px) {
       }
 
       .booklet {
@@ -110,6 +111,7 @@
         box-shadow: 0px -1px 1px #fff;
         opacity: 0.8;
       }
+      
       .book_wrapper {
         margin: 0 auto;
         padding-top: 09px;
@@ -162,6 +164,16 @@
         -webkit-box-shadow: 1px 1px 1px #fff;
         box-shadow: 1px 1px 1px #fff;
       }
+      
+      .USA_brochure_tilt {
+  transform: rotate(0deg);
+}
+
+@media (max-width: 912px) {
+  .USA_brochure_tilt {
+    transform: rotate(90deg);
+  }
+}
       .booklet .b-wrap-right img {
         border: 1px solid #e6e3c2;
       }
@@ -182,6 +194,7 @@
         box-shadow: 0px -1px 1px #fff;
         opacity: 0.8;
       }
+
       a#next_page_button,
       a#prev_page_button {
         display: none;
@@ -194,10 +207,10 @@
         background: transparent url(images/buttons.png) no-repeat 0px -40px;
       }
       a#prev_page_button {
-        left: -30px;
+        left: 15px;
       }
       a#next_page_button {
-        right: -30px;
+        right: 15px;
         background-position: -41px -40px;
       }
       a#next_page_button:hover {
@@ -206,8 +219,6 @@
       a#prev_page_button:hover {
         background-position: 0px 0px;
       }
-    </style>
-    <style>
       .wrap {
         height: 100%;
         display: flex;
@@ -308,27 +319,37 @@
         <a href="/index.html"><button class="button">Back to Home</button></a>
       </div>
     </div>
-    <div class="book_wrapper">
-      <a id="next_page_button"></a>
-      <a id="prev_page_button"></a>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100vw;
+      "
+    >
+      <div class="book_wrapper USA_brochure_tilt">
+        <a id="next_page_button"></a>
+        <a id="prev_page_button"></a>
 
-      <div id="mybook" style="display: none">
-        <div class="b-load">
-          <div>
-            <img src="/images/SAN BROCHURE FRONT.jpg" alt="" />
-            <div class="pgNumber">1/4</div>
-          </div>
-          <div>
-            <img src="/images/BROCHURE SECOND USA INNER.jpg" alt="" />
-            <div class="pgNumber">2/4</div>
-          </div>
-          <div>
-            <img src="/images/BROCHURE USA SECOND INNER.jpg" alt="" />
-            <div class="pgNumber">3/4</div>
-          </div>
-          <div>
-            <img src="/images/SAN BROCHURE BACK UK.jpg" alt="" />
-            <div class="pgNumber">4/4</div>
+        <div class="" id="mybook" style="display: none">
+          <div class="b-load">
+            <div>
+              <img src="/images/SAN BROCHURE FRONT.jpg" alt="" />
+              <div class="pgNumber">1/4</div>
+            </div>
+            <div>
+              <img src="/images/BROCHURE SECOND USA INNER.jpg" alt="" />
+              <div class="pgNumber">2/4</div>
+            </div>
+            <div>
+              <img src="/images/BROCHURE USA SECOND INNER.jpg" alt="" />
+              <div class="pgNumber">3/4</div>
+            </div>
+            <div>
+              <img src="/images/SAN BROCHURE BACK UK.jpg" alt="" />
+              <div class="pgNumber">4/4</div>
+            </div>
           </div>
         </div>
       </div>
