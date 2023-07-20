@@ -29,16 +29,22 @@
       media="screen"
     />
 
-    <link rel="shortcut icon" href="nikhil/Logo-for-web.png">
-    <link rel="apple-touch-icon" href="nikhil/Logo-for-web.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="nikhil/Logo-for-web.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="nikhil/Logo-for-web.png">
-
+    <link rel="shortcut icon" href="nikhil/Logo-for-web.png" />
+    <link rel="apple-touch-icon" href="nikhil/Logo-for-web.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="nikhil/Logo-for-web.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="nikhil/Logo-for-web.png"
+    />
+    <!--  BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--  CSS THEME -->
+    <link rel="stylesheet" href="css/style.css" />
     <style>
       * {
         margin: 0;
         padding: 0;
-		
       }
       body {
         /* background: #eba426; */
@@ -47,19 +53,19 @@
         font-size: 12px;
         color: #333;
         font-family: "Oswald", sans-serif;
-		    zoom: 125%;
+        zoom: 125%;
       }
 
-      .bookHeader{
+      .bookHeader {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         font-size: 20px;
       }
-      
-      @media screen and (max-width:1115px){
-        .bookHeader{
-          margin-left: 110px
+
+      @media screen and (max-width: 1115px) {
+        .bookHeader {
+          margin-left: 110px;
         }
       }
       .booklet {
@@ -164,7 +170,7 @@
       .booklet .b-wrap-right img {
         border: 1px solid #e6e3c2;
       }
-      .pgNumber{
+      .pgNumber {
         bottom: 10px;
         position: absolute;
         display: block;
@@ -206,98 +212,98 @@
         background-position: 0px 0px;
       }
     </style>
-        <style>
-          .wrap {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-    
-          .button {
-            min-width: 100px;
-            min-height: 20px;
-            font-family: "Nunito", sans-serif;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1.3px;
-            font-weight: 700;
-            color: #313133;
-            background: #d1a44f;
-            background: linear-gradient(
-              90deg,
-              rgb(230, 186, 129) 0%,
-              rgb(185, 209, 79) 100%
-            );
-            border: none;
-            border-radius: 1000px;
-            box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
-            transition: all 0.3s ease-in-out 0s;
-            cursor: pointer;
-            outline: none;
-            position: relative;
-            padding: 10px;
-          }
-    
-          button::before {
-            content: "";
-            border-radius: 1000px;
-            min-width: calc(125px + 12px);
-            min-height: calc(30px + 12px);
-            border: 2px solid #fffb00;
-            box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            transition: all 0.3s ease-in-out 0s;
-          }
-    
-          .button:hover,
-          .button:focus {
-            color: #313133;
-            transform: translateY(-6px);
-          }
-    
-          button:hover::before,
-          button:focus::before {
-            opacity: 1;
-          }
-    
-          button::after {
-            content: "";
-            width: 30px;
-            height: 30px;
-            border-radius: 100%;
-            border: 6px solid #00ffcb;
-            position: absolute;
-            z-index: -1;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: ring 1.5s infinite;
-          }
-    
-          button:hover::after,
-          button:focus::after {
-            animation: none;
-            display: none;
-          }
-    
-          @keyframes ring {
-            0% {
-              width: 30px;
-              height: 30px;
-              opacity: 1;
-            }
-            100% {
-              width: 300px;
-              height: 300px;
-              opacity: 0;
-            }
-          }
-        </style>
+    <style>
+      .wrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .button {
+        min-width: 100px;
+        min-height: 20px;
+        font-family: "Nunito", sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        font-weight: 700;
+        color: #313133;
+        background: #d1a44f;
+        background: linear-gradient(
+          90deg,
+          rgb(230, 186, 129) 0%,
+          rgb(185, 209, 79) 100%
+        );
+        border: none;
+        border-radius: 1000px;
+        box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        padding: 10px;
+      }
+
+      button::before {
+        content: "";
+        border-radius: 1000px;
+        min-width: calc(125px + 12px);
+        min-height: calc(30px + 12px);
+        border: 2px solid #fffb00;
+        box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      .button:hover,
+      .button:focus {
+        color: #313133;
+        transform: translateY(-6px);
+      }
+
+      button:hover::before,
+      button:focus::before {
+        opacity: 1;
+      }
+
+      button::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: 6px solid #00ffcb;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: ring 1.5s infinite;
+      }
+
+      button:hover::after,
+      button:focus::after {
+        animation: none;
+        display: none;
+      }
+
+      @keyframes ring {
+        0% {
+          width: 30px;
+          height: 30px;
+          opacity: 1;
+        }
+        100% {
+          width: 300px;
+          height: 300px;
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="bookHeader">
@@ -306,9 +312,9 @@
       <div class="wrap">
         <a href="/index.html"><button class="button">Back to Home</button></a>
       </div>
-     </div>
+    </div>
 
-    <div class="book_wrapper">
+    <!-- <div class="book_wrapper">
       <a id="next_page_button"></a>
       <a id="prev_page_button"></a>
 
@@ -332,6 +338,25 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+    <div style="position: relative; padding-top: 0; width: 100vw; height: 80vh">
+      <iframe
+        style="
+          position: absolute;
+          border: none;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+        "
+        src="https://online.fliphtml5.com/ymida/lndg/"
+        seamless="seamless"
+        scrolling="no"
+        frameborder="0"
+        allowtransparency="true"
+        allowfullscreen="true"
+      ></iframe>
     </div>
 
     <script type="text/javascript">

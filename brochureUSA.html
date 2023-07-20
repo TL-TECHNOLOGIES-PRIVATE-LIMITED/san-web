@@ -16,6 +16,7 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"
     ></script>
+    <script src="//static.fliphtml5.com/web/js/plugin/LightBox/js/fliphtml5-light-box-api-min.js"></script>
     <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
     <script
       src="booklet/jquery.booklet.1.1.0.min.js"
@@ -28,6 +29,14 @@
       rel="stylesheet"
       media="screen"
     />
+    <script src="turn.html4.js"></script>
+    <script>
+      $("#album").turn({
+        width: 400,
+        height: 300,
+        autoCenter: true,
+      });
+    </script>
 
     <link rel="shortcut icon" href="nikhil/Logo-for-web.png" />
     <link rel="apple-touch-icon" href="nikhil/Logo-for-web.png" />
@@ -111,7 +120,7 @@
         box-shadow: 0px -1px 1px #fff;
         opacity: 0.8;
       }
-      
+
       .book_wrapper {
         margin: 0 auto;
         padding-top: 09px;
@@ -164,16 +173,29 @@
         -webkit-box-shadow: 1px 1px 1px #fff;
         box-shadow: 1px 1px 1px #fff;
       }
-      
-      .USA_brochure_tilt {
-  transform: rotate(0deg);
-}
 
-@media (max-width: 912px) {
-  .USA_brochure_tilt {
-    transform: rotate(90deg);
-  }
-}
+      .USA_brochure_tilt {
+        transform: rotate(0deg);
+      }
+      .USA_brochure_tilt-inner {
+        transform: rotate(0deg);
+      }
+
+      @media (max-width: 912px) {
+        .USA_brochure_tilt {
+          /* margin-top: 10%; */
+          transform: rotate(90deg);
+          zoom: 80%;
+        }
+      }
+      @media (max-width: 710px) {
+        .USA_brochure_tilt {
+          margin-top: 10%;
+          transform: rotate(90deg);
+          zoom: 50rem;
+        }
+      }
+
       .booklet .b-wrap-right img {
         border: 1px solid #e6e3c2;
       }
@@ -309,6 +331,12 @@
           opacity: 0;
         }
       }
+
+      #album {
+        width: 100vw;
+        height: 80vh;
+        margin: 5% auto;
+      }
     </style>
   </head>
   <body>
@@ -319,7 +347,8 @@
         <a href="/index.html"><button class="button">Back to Home</button></a>
       </div>
     </div>
-    <div
+
+    <!-- <div
       style="
         display: flex;
         align-items: center;
@@ -332,7 +361,7 @@
         <a id="next_page_button"></a>
         <a id="prev_page_button"></a>
 
-        <div class="" id="mybook" style="display: none">
+        <div class="USA_brochure_tilt-inner" id="mybook" style="display: none">
           <div class="b-load">
             <div>
               <img src="/images/SAN BROCHURE FRONT.jpg" alt="" />
@@ -353,9 +382,91 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
+    <!-- <div style="position: relative; padding-top: 0; width: 100vw; height: 80vh">
+      <iframe
+        style="
+          position: absolute;
+          border: none;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+        "
+        src="https://online.fliphtml5.com/ymida/fyuy/"
+        seamless="seamless"
+        scrolling="no"
+        frameborder="0"
+        allowtransparency="true"
+        allowfullscreen="true"
+      ></iframe>
+    </div> -->
+
+    <!-- <div style="position: relative; padding-top: 0; width: 100vw; height: 80vh">
+      <iframe
+        style="
+          position: absolute;
+          border: none;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+        "
+        allowfullscreen="allowfullscreen"
+        scrolling="no"
+        class="fp-iframe"
+        style="border: 0px; width: 100%; height: 600px"
+        src="https://heyzine.com/flip-book/e931cc9eb1.html"
+      ></iframe>
+    </div> -->
+
+    <!-- <div id="album">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div> -->
+
+    <div style="height: 80vh; width: 100vw" id="flipbook">
+      <div class="hard"></div>
+      <div class="hard"></div>
+      <div
+        style="
+          background-image: url(images/SAN\ BROCHURE\ FRONT.jpg);
+          background-size: 100% 100%;
+        "
+      ></div>
+      <div
+        style="
+          background-image: url(images/BROCHURE\ SECOND\ USA\ INNER.jpg);
+          background-size: 100% 100%;
+        "
+      ></div>
+      <div
+        style="
+          background-image: url(images/BROCHURE\ USA\ SECOND\ INNER.jpg);
+          background-size: 100% 100%;
+        "
+      ></div>
+      <div
+        style="
+          background-image: url(images/SAN\ BROCHURE\ USA.jpg);
+          background-size: 100% 100%;
+        "
+      ></div>
+      <div class="hard"></div>
+      <div class="hard"></div>
+    </div>
     <script type="text/javascript">
+      $("#flipbook").turn({
+        width: 400,
+        height: 300,
+        autoCenter: true,
+      });
+    </script>
+
+    <!-- <script type="text/javascript">
       $(function () {
         var $mybook = $("#mybook");
         var $bttn_next = $("#next_page_button");
@@ -391,6 +502,6 @@
             .attr("src", source);
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>
